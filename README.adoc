@@ -1,6 +1,7 @@
 = Simple Setup
 
-``
+[source]
+----
 #!/usr/bin/env bash
 
 set -Eeuxo pipefail
@@ -12,4 +13,4 @@ trap 'echo Error at about $LINENO' ERR
 git clone https://github.com/JeremyOttley/simple.git
 
 cp -rivf ~/simple/*.* .
-``
+----
