@@ -1,1 +1,15 @@
 = Simple Setup
+
+````
+#!/usr/bin/env bash
+
+set -Eeuxo pipefail
+
+IFS=$'\n\t'
+
+trap 'echo Error at about $LINENO' ERR
+
+git clone https://github.com/JeremyOttley/simple.git
+
+cp -rivf ~/simple/*.* .
+````
