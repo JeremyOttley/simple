@@ -1,1 +1,3 @@
+xrandr --dpi 210
+
 export EDITOR='vim'
