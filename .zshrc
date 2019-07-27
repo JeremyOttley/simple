@@ -95,7 +95,7 @@ function set-prompt() {
 
   local top_left='%F{blue}%~%f'
   local top_right="%F{green}${git_branch}%f"
-  local bottom_left='%B%F{%(?.green.red)}%#%f%b '
+  local bottom_left='%B%F{%(?.green.red)}♥%f%b '
   local bottom_right='%F{yellow}%T%f'
 
   PROMPT="$(fill-line "$top_left" "$top_right")"$'\n'$bottom_left
