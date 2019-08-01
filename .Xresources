@@ -2,42 +2,25 @@
 ! Colour Configuration
 ! ------------------------------------------------------------------------------
 
-! special
-*.foreground:   #d8dee8
-*.background:   #2f343f
-*.cursorColor:  #b48ead
-
-! black
-*.color0  : #4b5262
-*.color8  : #434a5a
-
-! red
-*.color1  : #bf616a
-*.color9  : #b3555e
-
-! green
-*.color2  : #a3be8c
-*.color10 : #93ae7c
-
-! yellow
-*.color3  : #ebcb8b
-*.color11 : #dbbb7b
-
-! blue
-*.color4  : #81a1c1
-*.color12 : #7191b1
-
-! magenta
-*.color5  : #b48ead
-*.color13 : #a6809f
-
-! cyan
-*.color6  : #89d0bA
-*.color14 : #7dbba8
-
-! white
-*.color7  : #e5e9f0
-*.color15 : #d1d5dc
+*background:	#323F4E
+*foreground:	#F8F8F2
+*cursorColor:	#F8F8F2
+*color0:	#3D4C5F
+*color1:	#F48FB1
+*color2:	#A1EFD3
+*color3:	#F1FA8C
+*color4:	#92B6F4
+*color5:	#BD99FF
+*color6:	#87DFEB
+*color7:	#F8F8F2
+*color8:	#56687E
+*color9:	#EE4F84
+*color10:	#53E2AE
+*color11:	#F1FF52
+*color12:	#6498EF
+*color13:	#985EFF
+*color14:	#24D1E7
+*color15:	#E5E5E5
 
 ! ------------------------------------------------------------------------------
 ! Font configuration
