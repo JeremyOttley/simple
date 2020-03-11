@@ -1,5 +1,6 @@
 *add to .bashrc or .zshrc:*
 
+```
 function clj() {
     if [[ -z $@ ]]
     then
@@ -8,3 +9,4 @@ function clj() {
         command clj $@
     fi
 }
+```
