@@ -9,4 +9,13 @@
                   [lein-asciidoctor "0.1.12"]
                   [lein-kibit "0.1.8"]
                   [venantius/ultra "0.6.0"]]
-        :middleware [cider-nrepl.plugin/middleware]}}
+        :asciidoctor {:sources "doc/*.ascii"
+              :format :html5
+              :to-dir "out/"
+              :header false
+              :toc :left
+              :toc-title "Contents"
+              :doctype :article
+              :source-highlight true}
+        :middleware [cider-nrepl.plugin/middleware]
+        :repl-options {:prompt (fn [ns] (format "%s(%s) => " ns (System/getenv "HOME")))}}}
