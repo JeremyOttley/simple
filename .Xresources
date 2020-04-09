@@ -1,122 +1,52 @@
-! ------------------------------------------------------------------------------
-! Colour Configuration
-! ------------------------------------------------------------------------------
-
-*background:	#323F4E
-*foreground:	#F8F8F2
-*cursorColor:	#F8F8F2
-*color0:	#3D4C5F
-*color1:	#F48FB1
-*color2:	#A1EFD3
-*color3:	#F1FA8C
-*color4:	#92B6F4
-*color5:	#BD99FF
-*color6:	#87DFEB
-*color7:	#F8F8F2
-*color8:	#56687E
-*color9:	#EE4F84
-*color10:	#53E2AE
-*color11:	#F1FF52
-*color12:	#6498EF
-*color13:	#985EFF
-*color14:	#24D1E7
-*color15:	#E5E5E5
-
-! ------------------------------------------------------------------------------
-! Font configuration
-! ------------------------------------------------------------------------------
-
-URxvt*font: xft:Go-Mono:pixelsize=12:antialias=true
-URxvt*boldFont: xft:Go-Mono:pixelsize=12:antialias=true
-URxvt*italicFont: xft:Go-Mono:italic:pixelsize=12:antialias=true
-URxvt*boldItalicFont: xft:Go-Mono:bold:italic:pixelsize=12:antialias=true
-
-!URxvt*font:				xft:M+ 1mn:regular:size=8
-!URxvt*boldFont:			xft:M+ 1mn:bold:size=8
-!URxvt*italicFont:		xft:M+ 1mn:italic:size=8
-!URxvt*boldItalicFont:	xft:M+ 1mn:bold italic:size=8
-
-! ------------------------------------------------------------------------------
-! Xft Font Configuration
-! ------------------------------------------------------------------------------
-
-Xft.dpi: 102
+Xft.dpi: 96
 Xft.antialias: true
 Xft.hinting: true
-Xft.rgba: rgb
-Xft.autohint: false
-Xft.hintstyle: hintfull
+Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
+Xft.rgba: rgb
 
-xcursor.theme:            Vanilla-DMZ
-xscreensaver.fade:   false
-xscreensaver.unfade: false
+xterm*faceName: Iosevka
+xterm*faceSize: 11
+xterm*renderFont: true
+xterm*font: fixed
+xterm*boldFont: fixed
+xterm*cursorBlink: true
+xterm*loginShell: true
+xterm*vt100*geometry: 80x26
+xterm*saveLines: 999999
+xterm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
+xterm*termName: xterm-256color
+xterm*eightBitInput: false
+xterm*foreground: rgb:ff/ff/ff
+xterm*background: rgb:00/00/00
+xterm*boldMode: false
+xterm*colorBDMode: true
 
-! ------------------------------------------------------------------------------
-! URxvt configs
-! ------------------------------------------------------------------------------
+XTerm.vt100.translations: #override \n\
+  Ctrl <Key> j: smaller-vt-font() \n\
+  Ctrl <Key> k: larger-vt-font()
 
-! font spacing
-URxvt*letterSpace:		0
-URxvt.lineSpace:		0
+Xmessage*defaultButton:            okay
+Xmessage*form.message.Scroll:      WhenNeeded
 
-! general settings
-URxvt*saveline:			15000
+*.font: xft:Iosevka:style=Regular:size=11
+*.boldFont: xft:Iosevka:style=Bold:size=11
+*.italicFont: xft:Iosevka:style=Italic:size=11
+*.boldItalicFont: xft:Iosevka:style=Bold Italic:size=11
+
 URxvt*termName:			rxvt-256color
-URxvt*iso14755:			false
-URxvt*urgentOnBell:		true
-
-! appearance
-URxvt*depth:			24
-URxvt*scrollBar:		false
-URxvt*scrollBar_right:	false
-URxvt*internalBorder:	24
-URxvt*externalBorder:	0
-URxvt.geometry:			84x22
-
-! perl extensions
-URxvt.perl-ext-common:	default,clipboard,url-select,keyboard-select
-
-! macros for clipboard and selection
-URxvt.copyCommand:		xclip -i -selection clipboard
-URxvt.pasteCommand:		xclip -o -selection clipboard
-URxvt.keysym.M-c:		perl:clipboard:copy
-URxvt.keysym.M-v:		perl:clipboard:paste
-URxvt.keysym.M-C-v:		perl:clipboard:paste_escaped
-URxvt.keysym.M-Escape:	perl:keyboard-select:activate
-URxvt.keysym.M-s:		perl:keyboard-select:search
-URxvt.keysym.M-u:		perl:url-select:select_next
+URxvt.loginShell: true
+URxvt.geometry: 80x50
+URxvt.saveLines: 10000
+URxvt.cutchars: "`\"'&()*,:;<=>?[\\]^{|}$"
+URxvt.foreground: rgb:a8/a8/a8
+URxvt.background: rgb:00/00/00
+URxvt.scrollBar: false
+URxvt.visualBell: true
+// this is SO AWESOME:
+URxvt.fading: 15
+// URxvt spells "eightBitInput" as "meta8" and defaults it to false
 URxvt.urlLauncher:		firefox
 URxvt.underlineURLs:	true
-URxvt.urlButton:		1     
 
-! scroll one line
-URxvt.keysym.Shift-Up:		command:\033]720;1\007
-URxvt.keysym.Shift-Down:	command:\033]721;1\007
-
-! control arrow
-URxvt.keysym.Control-Up:	\033[1;5A
-URxvt.keysym.Control-Down:	\033[1;5B
-URxvt.keysym.Control-Right:	\033[1;5C
-URxvt.keysym.Control-Left:	\033[1;5D
-
-! ------------------------------------------------------------------------------
-! Rofi configs
-! ------------------------------------------------------------------------------
-
-!rofi.color-enabled: true
-!rofi.color-window: #2e3440, #2e3440, #2e3440
-!rofi.color-normal: #2e3440, #d8dee9, #2e3440, #2e3440, #bf616a
-!rofi.color-active: #2e3440, #b48ead, #2e3440, #2e3440, #93e5cc
-!rofi.color-urgent: #2e3440, #ebcb8b, #2e3440, #2e3440, #ebcb8b
-!rofi.modi: run,drun,window
-
-! ------------------------------------------------------------------------------
-! Dmenu configs
-! ------------------------------------------------------------------------------
-
-!dmenu.selforeground:	    #d8dee9
-!dmenu.background:	        #2e3440
-!dmenu.selbackground:	    #bf616a
-!dmenu.foreground:	        #d8dee9
-                                                           
+!xcursor.theme: left_ptr
