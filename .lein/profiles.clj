@@ -17,5 +17,7 @@
               :toc-title "Contents"
               :doctype :article
               :source-highlight true}
-        :middleware [cider-nrepl.plugin/middleware]
+        :repl
+               {:plugins [[cider/cider-nrepl "0.21.1"]
+               :dependencies [[nrepl "0.4.5"]]}
         :repl-options {:prompt (fn [ns] (format "%s(%s) => " ns (System/getenv "HOME")))}}}
