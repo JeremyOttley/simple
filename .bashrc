@@ -5,3 +5,5 @@ PS1='\[\e[0;31m♥ \e[0;91m\]\W \[\e[0;35m\]❯\[\e[0m\] '
 shopt -s autocd 
 
 e () { emacs "$@" & disown; }
+
+alias stripescapes='sed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]//g"'
