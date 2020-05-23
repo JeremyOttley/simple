@@ -34,19 +34,6 @@ Xmessage*form.message.Scroll:      WhenNeeded
 *.italicFont: xft:Iosevka:style=Italic:size=11
 *.boldItalicFont: xft:Iosevka:style=Bold Italic:size=11
 
-URxvt*termName:			rxvt-256color
-URxvt.loginShell: true
-URxvt.geometry: 80x50
-URxvt.saveLines: 10000
-URxvt.cutchars: "`\"'&()*,:;<=>?[\\]^{|}$"
-URxvt.foreground: rgb:a8/a8/a8
-URxvt.background: rgb:00/00/00
-URxvt.scrollBar: false
-URxvt.visualBell: true
-// this is SO AWESOME:
-URxvt.fading: 15
-// URxvt spells "eightBitInput" as "meta8" and defaults it to false
-URxvt.urlLauncher:		firefox
-URxvt.underlineURLs:	true
 
-!xcursor.theme: left_ptr
+
+xcursor.theme: left_ptr
